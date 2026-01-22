@@ -46,7 +46,7 @@
 
 Baseline (realization 1): 101 мс
 
-![График 1](assets/graph1_threads_time.png)
+![График 1](graph1_threads_time.png)
 
 ### Эксперимент 2: Зависимость от числа потоков (schedule dynamic, default chunk)
 
@@ -75,7 +75,7 @@ Baseline (realization 1): 101 мс
 | dynamic  | 1000       | 17         |
 | dynamic  | 10000      | 18         |
 
-![График 3](assets/graph3_chunk_comparison.png)
+![График 3](graph3_chunk_comparison.png)
 
 **Анализ:** 
 - Static практически не зависит от chunk_size — работа делится поровну заранее, overhead минимален
@@ -105,11 +105,11 @@ Baseline (realization 1): 101 мс
 | 2 (dynamic, chunk=1000)       | 17         | 5.94      |
 | 3 (manual)                    | 20         | 5.05      |
 
-![График 5](assets/graph5_all_comparison.png)
+![График 5](graph5_all_comparison.png)
 
 ### Ускорение
 
-![График 2](assets/graph2_speedup.png)
+![График 2](graph2_speedup.png)
 
 **Анализ:** Максимальное ускорение ~5-6x при 8 потоках на 6-ядерном процессоре (12 логических). Это близко к теоретическому максимуму для данной задачи. Дальнейшее увеличение потоков (16) не даёт прироста — все ядра уже загружены.
 
